@@ -1,0 +1,9 @@
+network:
+    version: 2
+    renderer: networkd
+    ethernets:
+        eth0:
+            addresses:
+                - 192.168.3.16/24
+            nameservers:
+                addresses: [114.114.114.114]

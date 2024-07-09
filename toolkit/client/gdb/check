@@ -1,0 +1,25 @@
+set $LINE_BP_1 = 17
+set $LINE_BP_2 = 16
+
+b main
+commands 1
+  print argc
+  continue
+end
+
+b main.cpp:$LINE_BP_1
+commands 2
+  p i
+  p b
+  continue
+end
+
+b main.cpp:$LINE_BP_2
+commands 3
+  p i
+  p b
+  continue
+end
+
+show args
+run
